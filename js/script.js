@@ -13,9 +13,22 @@ if (navigator.serviceWorker) {
   })
 }
 
-/**
- * This function displays an alert.
- */
-function myButtonClicked() {
-  document.getElementById("hello-world").innerHTML = "<p>Hello, World!</p>"
+"use strict"
+
+window.onload = function() {
+  // this calculates area of a rectangle
+
+  const params = new URLSearchParams(document.location.search)
+  
+  // input
+  const length = params.get('a')
+  const width = params.get('b')
+
+  // process
+  const area = length * width
+  const dimensions = "<ul>\n<li>a = " + length + "<ul>\n<li>b = " + width
+
+  // output
+  document.getElementById('dimensions').innerHTML = dimensions
+  document.getElementById('volume').innerHTML = 'Area is: ' + area.toFixed(2) + ' cm³'
 }
