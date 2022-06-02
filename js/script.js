@@ -26,9 +26,9 @@ window.onload = function() {
 
   // process
   const area = length * width
-  const dimensions = "<ul>\n<li>a = " + length + "<ul>\n<li>b = " + width
+  const dimensions = "<ul>\n<li>a = " + length + "</li>\n<li>b = " + width
 
   // output
   document.getElementById('dimensions').innerHTML = dimensions
-  document.getElementById('volume').innerHTML = 'Area is: ' + area.toFixed(2) + ' cm³'
+  document.getElementById('area').innerHTML = 'Area is: ' + area.toFixed(2) + ' cm²'
 }
